@@ -3,7 +3,7 @@
   become: yes
   gather_facts: yes
   tasks:
-   - name: i want to install ubuntu on 16 ansible node
+   - name: i want to install webserver on ubuntu 16 ansible node
      apt:
        name: "{{mywebpackonubuntu}}"
        state: present
@@ -15,7 +15,7 @@
      when: ansible_os_family=="debian"
    - name: i want to install webserver on RedHat ansible node
      yum:
-       name: "{{mywebpackonubuntu}}"
+       name: "{{mywebpackonredhat}}"
        state: present
      when: ansible_os_family =="RedHat"
    - name: i want to start webserver on RedHat ansible node
