@@ -2,7 +2,7 @@
 - hosts: mywebservers
   become: yes
   gather_facts: yes
-  task:
+  tasks:
    - name: i want to install ubuntu on 16 ansible node
      apt:
        name: "{{mywebpackonubuntu}}"
