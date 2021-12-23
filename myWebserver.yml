@@ -12,7 +12,7 @@
      service:
        name: "{{mywebpackonubuntu}}"
        state: started
-     when: ansible_os_family=="debian"
+     when: ansible_os_family=="Debian"
    - name: i want to install webserver on RedHat ansible node
      yum:
        name: "{{mywebpackonredhat}}"
