@@ -7,20 +7,22 @@
        name: "{{myjavapackonubuntu}}"
        state: present
        register: myresult
+     when: ansible_os_family=="Debian"  
 
    - name: display the result of java 8 installation on ubuntu
      debug:
-     msg: "{{myresult}}"
+        msg: "{{myresult}}"
 
    - name: install java 9 on Redhat
      apt:
       name: "{{myjavapackonredhat}}" 
       state: present
       register: myresult
-      
+     when: ansible_os_famil=="RedHat"  
+
    - name: result of java9 installation on Redhat   
      debug:
-     msg: "{{myresult}}"
+        msg: "{{myresult}}"
 
 
 
