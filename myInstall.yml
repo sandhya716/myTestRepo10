@@ -4,7 +4,7 @@
   tasks:
    - name: install java 8 on ubuntu 16
      apt:
-       name: {{"myjavapackonubuntu"}}
+       name: "{{myjavapackonubuntu}}"
        state: present
        register: myresult
 
@@ -14,9 +14,10 @@
 
    - name: install java 9 on Redhat
      apt:
-      name: {{"myjavapackonredhat"}}  
+      name: "{{myjavapackonredhat}}" 
       state: present
       register: myresult
+      
    - name: result of java9 installation on Redhat   
      debug:
      msg: "{{myresult}}"
