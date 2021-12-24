@@ -1,0 +1,25 @@
+---
+- hosts: mywebservers
+  gather_facts: yes
+  tasks:
+   - name: install java 8 on ubuntu 16
+     apt:
+       name: {{"myjavapackonubuntu"}}
+       state: present
+       register: myresult
+
+   - name: display the result of java 8 installation on ubuntu
+     debug:
+     msg: "{{myresult}}"
+
+   - name: install java 9 on Redhat
+     apt:
+      name: {{"myjavapackonredhat"}}  
+      state: present
+      register: myresult
+   - name: result of java9 installation on Redhat   
+     debug:
+     msg: "{{myresult}}"
+
+
+
