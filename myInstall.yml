@@ -8,7 +8,7 @@
        state: present
      when: ansible_os_family =="Debian"  
 
-   - name: install java 9 on Redhat
+   - name: install java 7 on Redhat
      yum:
       name: "{{myjavapackonredhat}}" 
       state: present
