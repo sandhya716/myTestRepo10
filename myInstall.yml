@@ -1,28 +1,28 @@
 ---
 - hosts: mywebservers
-  gather_facts: yes
+  become: yes
   tasks:
    - name: install java 8 on ubuntu 16
      apt:
        name: "{{myjavapackonubuntu}}"
        state: present
        register: myresult
-     when: ansible_os_family=="Debian"  
+     when: ansible_os_family =="Debian"  
 
    - name: display the result of java 8 installation on ubuntu
      debug:
         msg: "{{myresult}}"
 
    - name: install java 9 on Redhat
-     apt:
+     yum:
       name: "{{myjavapackonredhat}}" 
       state: present
-      register: myresult
-     when: ansible_os_famil=="RedHat"  
+      register: myresult1
+     when: ansible_os_family =="RedHat"  
 
    - name: result of java9 installation on Redhat   
      debug:
-        msg: "{{myresult}}"
+        msg: "{{myresult1}}"
 
 
 
