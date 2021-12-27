@@ -1,22 +1,24 @@
 ---
-hosts: 172.31.9.176
-become: yes
-tasks:
-- name: install git on ubuntu
-  apt:
-    name: git
-    state: present
-  tags: mygit
-- name: install tree on ubuntu
-  apt:
-    name: tree
-    state: present
-  tags: mytree
-- name: install wget on ubuntu
-  apt:
-    name: wget
-    state: present
-  tags: mywget      
+- hosts: 172.31.9.176
+  become: yes
+  tasks:
+  - name: install git on ubuntu
+    apt:
+      name: git
+      state: present
+    tags: mygit
+
+  - name: install tree on ubuntu
+    apt:
+      name: tree
+      state: present
+    tags: mytree
+
+  - name: install wget on ubuntu
+    apt:
+      name: wget
+      state: present
+    tags: mywget      
  
 
     
