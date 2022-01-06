@@ -45,7 +45,7 @@
     path: /opt/tomcat/logs/
     recurse: yes
     owner: tomcat
-    state: directory  
+    state: directory 
 
 
 
